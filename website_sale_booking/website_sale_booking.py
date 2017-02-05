@@ -13,16 +13,16 @@ class Booking(models.Model):
 
     # bookings = fields.One2many(compute='booking')
     
-    @api.models
+    @api.model
     def _url(self):
         self.url = "/booking/%s" % "something"
     url = fields.Char(string="Url",compute=_url)
-    @api.models
+    @api.model
     def _name(self):
         self.name = 'Some good name'
     name = fields.Char(string="Name",compute=_name)
-    date_start = fields.DateTime(string='Start')
-    date_end   = fields.DateTime(string='End')
+    date_start = fields.Datetime(string='Start')
+    date_end   = fields.Datetime(string='End')
     # employee_id
     # partner_id  
     # product_id
